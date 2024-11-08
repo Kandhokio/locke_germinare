@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tábula Rasa de Locke - A Jornada de Escolhas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body>
+    <div id="game">
+        <h1>Tábula Rasa de Locke - A Jornada de Escolhas</h1>
+        <label for="player-name">Digite seu nome:</label>
+        <input type="text" id="player-name" placeholder="Seu nome">
+        <button onclick="startGame()">Iniciar Jornada</button>
+        
+        <!-- Botão para controle da música -->
+        <button onclick="toggleMusic()" id="music-button" class="playing">Pausar Música</button>
+    </div>
+
+    <!-- Elemento de áudio oculto para tocar a música -->
+    <audio id="background-music" src="musica.mp3" loop></audio>
+
+    <!-- Pop-up de introdução -->
+    <div id="intro-overlay" class="intro-overlay" style="display: none;">
+        <div class="intro-popup">
+            <h2>Bem-vindo(a) à Jornada</h2>
+            <p id="intro-text"></p>
+            <button onclick="proceedToGame()">Continuar</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+        // Função para iniciar a música após a interação do usuário
+        const music = document.getElementById('background-music');
+
+        function startGame() {
+            // Inicia a música na primeira interação
+            if (music.paused) {
+                music.play();
+            }
+            // Exibe o pop-up de introdução com o nome do jogador
+            playerName = document.getElementById('player-name').value;
+            if (playerName.trim() === "") {
+                alert("Por favor, insira seu nome.");
+                return;
+            }
+            localStorage.setItem('playerName', playerName);
+
+            const introOverlay = document.getElementById('intro-overlay');
+            const introText = document.getElementById('intro-text');
+            introText.textContent = `${playerName}, você assume a vida de um personagem fictício que nasce em uma comunidade periférica, enfrentando dilemas éticos complexos desde a infância até a velhice. Cada escolha reflete em valores inspirados nas ideias de John Locke e a teoria da “tábula rasa”, moldando quem você se tornará.`;
+            introOverlay.style.display = "flex";
+        }
+
+        // Função para continuar para a fase 1 após o pop-up
+        function proceedToGame() {
+            document.getElementById('intro-overlay').style.display = "none";
+            window.location.href = "fase1.html";
+        }
+
+        // Função para pausar ou retomar a música e alterar a cor do botão
+        function toggleMusic() {
+            const musicButton = document.getElementById('music-button');
+            if (music.paused) {
+                music.play();
+                musicButton.textContent = "Pausar Música";
+                musicButton.classList.remove("paused");
+                musicButton.classList.add("playing");
+            } else {
+                music.pause();
+                musicButton.textContent = "Retomar Música";
+                musicButton.classList.remove("playing");
+                musicButton.classList.add("paused");
+            }
+        }
+    </script>
+</body>
+</html>

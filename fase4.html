@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adulto - Compromissos e Sacrifícios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body class="fade">
+    <!-- Indicador de Progresso -->
+    <div id="progress">Fase 4 de 5</div>
+
+    <div id="game">
+        <h2>Adulto - Compromissos e Sacrifícios</h2>
+        <p id="story-text">um colega de trabalho o convida a participar de um esquema financeiro ilícito...</p>
+        <button onclick="showConsequence('Ao recusar o esquema, você mantém sua integridade e a estabilidade familiar...', 'freedom', 'fase5.html')">Recusar a proposta e se afastar do colega</button>
+        <button onclick="showConsequence('Participar do esquema traz um aumento rápido de renda para você...', 'power', 'fase5.html')">Aceitar e participar do esquema</button>
+        <button onclick="showConsequence('Você decide avisar a empresa sobre o esquema, gerando uma investigação...', 'group', 'fase5.html')">Alertar a empresa sobre o esquema</button>
+        <button onclick="showConsequence('Você opta por não se envolver, mantendo-se neutro...', 'indifference', 'fase5.html')">Ignorar a proposta sem interferir</button>
+    </div>
+
+    <div class="popup-overlay"></div>
+    <div id="popup" class="popup">
+        <p id="consequence-text"></p>
+        <button id="advance-button" onclick="fadeToNext()">Avançar</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

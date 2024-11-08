@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juventude - Desafios do Mundo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body class="fade">
+    <!-- Indicador de Progresso -->
+    <div id="progress">Fase 3 de 5</div>
+
+    <div id="game">
+        <h2>Juventude - Desafios do Mundo</h2>
+        <p id="story-text">um amigo de infância lhe pede ajuda para vender produtos ilegais fora da comunidade...</p>
+        <button onclick="showConsequence('Ao aceitar a proposta, você e seu amigo conseguem algum lucro, mas isso atrai a atenção de pessoas suspeitas...', 'group', 'fase4.html')">Aceitar a proposta e ajudá-lo</button>
+        <button onclick="showConsequence('Ao negar a proposta e relatar as intenções do amigo, você se vê sozinho, mas moralmente livre de culpa...', 'freedom', 'fase4.html')">Negar e denunciar o amigo</button>
+        <button onclick="showConsequence('Você tenta convencer seu amigo a fazer algo honesto, mas ele rejeita a sugestão...', 'power', 'fase4.html')">Desafiar o amigo, buscando uma forma legal de ajudar</button>
+        <button onclick="showConsequence('Você escolhe se distanciar da situação, não oferecendo ajuda nem se opondo ao amigo...', 'indifference', 'fase4.html')">Fingir que desconhece a proposta do amigo</button>
+    </div>
+
+    <div class="popup-overlay"></div>
+    <div id="popup" class="popup">
+        <p id="consequence-text"></p>
+        <button id="advance-button" onclick="fadeToNext()">Avançar</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velhice - Reflexão Final</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body class="fade">
+    <!-- Indicador de Progresso -->
+    <div id="progress">Fase 5 de 5</div>
+
+    <div id="game">
+        <h2>Velhice - Reflexão Final</h2>
+        <p id="story-text">você descobre uma doença grave e precisa decidir...</p>
+        <button onclick="showConsequence('Você opta por lutar pela vida, gastando o dinheiro no tratamento...', 'power', 'fresultados.html')">Usar o dinheiro no tratamento</button>
+        <button onclick="showConsequence('Você doa o dinheiro e sente que retribuiu à comunidade...', 'group', 'fresultados.html')">Doar o dinheiro para a comunidade</button>
+        <button onclick="showConsequence('Você escolhe deixar o dinheiro para sua família...', 'freedom', 'fresultados.html')">Guardar o dinheiro para a família</button>
+        <button onclick="showConsequence('Você decide viver seus últimos dias sem se preocupar, gastando o dinheiro consigo mesmo...', 'indifference', 'fresultados.html')">Aceitar a morte e gastar o dinheiro consigo</button>
+    </div>
+
+    <div class="popup-overlay"></div>
+    <div id="popup" class="popup">
+        <p id="consequence-text"></p>
+        <button id="advance-button" onclick="fadeToNext()">Avançar</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

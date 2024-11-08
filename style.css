@@ -1,0 +1,367 @@
+/* Importa a fonte Josefin Sans */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+/* Estilos gerais para o corpo */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: url('jhonlocke.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+}
+
+/* Estilos para o contêiner principal do jogo com animação de entrada */
+#game {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+    z-index: 900;
+    animation: fadeIn 1s ease;
+}
+
+/* Animação de entrada para títulos e textos */
+h1, h2, p, label {
+    animation: fadeIn 1.2s ease;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p, label {
+    color: #666;
+}
+
+/* Botões gerais com efeito de crescimento e sombra */
+button {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #605C5B;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background-color: #4E4B4A;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Campo de entrada */
+input {
+    padding: 8px;
+    width: calc(100% - 16px);
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Fundo escuro para destacar o pop-up */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+/* Estilo para o pop-up de consequência */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    z-index: 1001;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Texto e botão no pop-up */
+#consequence-text {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+#advance-button {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 10px 20px;
+    border: none;
+    background-color: #605C5B;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#advance-button:hover {
+    background-color: #4E4B4A;
+}
+
+/* Estilo para a seção de criadores */
+#creators {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+#creators h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#creators p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.creator-photos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.creator-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão de voltar */
+.back-button {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #605C5B;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.back-button:hover {
+    background-color: #4E4B4A;
+}
+
+/* Botão de controle de música */
+#music-button {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffffff;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+#music-button.playing {
+    background-color: #4CAF50;
+}
+
+#music-button.paused {
+    background-color: #E53935;
+}
+
+#music-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#music-button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Indicador de Progresso */
+#progress {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+/* Estilo do contêiner de estatísticas */
+#stats-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(240, 240, 240, 0.9);
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* Título para a seção de estatísticas */
+#stats-container h3 {
+    text-align: center;
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Estilo das barras de progresso */
+.stat-bar {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.stat-bar span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.progress-container {
+    background-color: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 4px;
+}
+
+/* Cores para cada atributo */
+.progress.power {
+    background-color: #4CAF50;
+}
+
+.progress.group {
+    background-color: #2196F3;
+}
+
+.progress.freedom {
+    background-color: #FF9800;
+}
+
+.progress.indifference {
+    background-color: #9E9E9E;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#welcome-message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#welcome-message.show {
+    opacity: 1;
+}
+
+/* Estilos para o pop-up de introdução */
+.intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.intro-popup {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.intro-popup h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.intro-popup p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.intro-popup button {
+    padding: 10px 20px;
+    background-color: #605C5B;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.intro-popup button:hover {
+    background-color: #4E4B4A;
+}

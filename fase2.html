@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adolescência - Descobrindo a Verdade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body class="fade">
+    <!-- Indicador de Progresso -->
+    <div id="progress">Fase 2 de 5</div>
+
+    <div id="game">
+        <h2>Adolescência - Descobrindo a Verdade</h2>
+        <p id="story-text">você descobre que seu pai está envolvido em atividades criminosas...</p>
+        <button onclick="showConsequence('Após a denúncia, seu pai é preso, deixando você e sua mãe em dificuldades financeiras...', 'freedom', 'fase3.html')">Denunciar o pai</button>
+        <button onclick="showConsequence('Ao aceitar o trabalho ilegal, você começa a ganhar dinheiro, mas se envolve com pessoas perigosas...', 'power', 'fase3.html')">Aceitar a oferta do pai</button>
+        <button onclick="showConsequence('Você busca apoio com amigos e professores, que oferecem algum suporte...', 'group', 'fase3.html')">Ficar ao lado da mãe e buscar ajuda na escola</button>
+        <button onclick="showConsequence('Você escolhe ignorar o que seu pai faz e vive sua rotina, sem se importar...', 'indifference', 'fase3.html')">Ignorar o que o pai faz e focar em sua própria vida</button>
+    </div>
+
+    <div class="popup-overlay"></div>
+    <div id="popup" class="popup">
+        <p id="consequence-text"></p>
+        <button id="advance-button" onclick="fadeToNext()">Avançar</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
