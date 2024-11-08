@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velhice - Reflexão Final</title>
+    <title>Meia-Idade - Governança e Crises</title>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-
+    <link rel="apple-touch-icon" sizes="180x180" href="img//apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img//favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body class="fade">
     <!-- Indicador de Progresso -->
-    <div id="progress">Fase 5 de 5</div>
+    <div id="progress">Fase 5 de 11</div>
 
     <div id="game">
-        <h2>Velhice - Reflexão Final</h2>
-        <p id="story-text">você descobre uma doença grave e precisa decidir...</p>
-        <button onclick="showConsequence('Você opta por lutar pela vida, gastando o dinheiro no tratamento...', 'power', 'fresultados.html')">Usar o dinheiro no tratamento</button>
-        <button onclick="showConsequence('Você doa o dinheiro e sente que retribuiu à comunidade...', 'group', 'fresultados.html')">Doar o dinheiro para a comunidade</button>
-        <button onclick="showConsequence('Você escolhe deixar o dinheiro para sua família...', 'freedom', 'fresultados.html')">Guardar o dinheiro para a família</button>
-        <button onclick="showConsequence('Você decide viver seus últimos dias sem se preocupar, gastando o dinheiro consigo mesmo...', 'indifference', 'fresultados.html')">Aceitar a morte e gastar o dinheiro consigo</button>
+        <h2>Meia-Idade - Governança e Crises</h2>
+<p id="story-text">
+    você foi eleito(a) prefeito(a), um dos cargos mais desafiadores da sua carreira. Contudo, seu mandato começa com uma série de crises que demandam atenção imediata. 
+    Cada grupo tem suas prioridades, e suas decisões moldarão não apenas sua popularidade, mas também o futuro da cidade:
+</p>
+<ul>
+    <li><strong>Pressão dos empresários:</strong> Eles pedem redução de impostos para fortalecer o comércio local e atrair investimentos externos, mas isso pode comprometer o orçamento da cidade para projetos sociais.</li>
+    <li><strong>Crise ambiental:</strong> Um desastre ambiental está devastando parte da comunidade. Você precisará priorizar ações rápidas para reduzir os impactos e proteger as famílias afetadas.</li>
+    <li><strong>Greve dos professores:</strong> Eles exigem melhores salários e condições de trabalho, mas atender às demandas pode gerar cortes em outras áreas importantes.</li>
+</ul>
+<p>Como líder, você precisa decidir onde concentrar seus esforços:</p>
+<button onclick="showConsequence('A economia precisa ser fortalecida.', 'power', 'popup-transicao.html')">Atendo os empresários</button>
+<button onclick="showConsequence('A natureza e a comunidade vêm primeiro.', 'group', 'popup-transicao.html')">Lidero ações ambientais</button>
+<button onclick="showConsequence('Tento equilibrar todas as demandas sem perder minha base de apoio.', 'freedom', 'popup-transicao.html')">Mediação entre as partes</button>
+<button onclick="showConsequence('Prefiro não me envolver diretamente.', 'indifference', 'popup-transicao.html')">Deixo que minha equipe resolva.</button>
+
     </div>
 
     <div class="popup-overlay"></div>

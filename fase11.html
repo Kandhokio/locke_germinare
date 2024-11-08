@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velhice - Reflexão Final</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img//apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img//favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="fade">
+    <!-- Indicador de Progresso -->
+    <div id="progress">Fase 11 de 11</div>
+
+    <div id="game">
+        <h2>Velhice - Reflexão Final</h2>
+        <p id="story-text">depois de anos no poder, você descobre uma doença terminal. Agora, com os fundos acumulados e a influência que ainda possui, você precisa decidir qual será o seu legado.</p>
+        <button onclick="showConsequence('Quero lutar pela minha vida, mesmo que isso custe caro.', 'power', 'explicacao-locke.html')">Invisto no meu tratamento</button>
+        <button onclick="showConsequence('Prefiro retribuir à comunidade.', 'group', 'explicacao-locke.html')">Crio um fundo comunitário</button>
+        <button onclick="showConsequence('Registro minha visão para o futuro.', 'freedom', 'explicacao-locke.html')">Escrevo um manifesto e saio da política</button>
+        <button onclick="showConsequence('Quero viver sem arrependimentos.', 'indifference', 'explicacao-locke.html')">Uso o dinheiro para aproveitar meus últimos dias</button>
+    </div>
+
+    <div class="popup-overlay"></div>
+    <div id="popup" class="popup">
+        <p id="consequence-text"></p>
+        <button id="advance-button" onclick="fadeToNext()">Avançar</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

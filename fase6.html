@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presidência - Chegada ao Poder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img//apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img//favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="fade">
+    <!-- Indicador de Progresso -->
+    <div id="progress">Fase 6 de 11</div>
+
+    <div id="game">
+        <h2>Presidência - Chegada ao Poder</h2>
+<p id="story-text">
+    após uma campanha marcada por suas conquistas anteriores, você foi eleito(a) Presidente da República. Agora, a responsabilidade de liderar o país é sua, e sua primeira grande decisão será a composição do ministério.
+    Cada escolha determinará o rumo inicial do governo, influenciando tanto a estabilidade política quanto a confiança da população.
+</p>
+<ul>
+    <li><strong>Escolher aliados políticos:</strong> Nomear figuras influentes de sua base partidária fortalecerá sua posição e garantirá apoio político, mas pode gerar críticas por possíveis conflitos éticos e corrupção.</li>
+    <li><strong>Escolher especialistas técnicos:</strong> Focar em ministros com conhecimento técnico prioriza o bem coletivo e a eficiência, mas pode alienar aliados políticos fundamentais.</li>
+    <li><strong>Escolher ministros independentes:</strong> Dar autonomia a figuras apartidárias pode trazer inovação e imparcialidade, mas corre o risco de comprometer sua capacidade de controle sobre o governo.</li>
+    <li><strong>Escolher ministros sem critérios claros:</strong> Tentar agradar todos os lados com escolhas heterogêneas pode criar um governo inconsistente e sem estratégia, enfraquecendo sua liderança.</li>
+</ul>
+<p>Como você montará o alicerce de sua administração?</p>
+<button onclick="showConsequence('Nomeio ministros influentes para consolidar minha posição, mesmo que isso crie conflitos éticos.', 'power', 'fase7.html')">Escolho aliados políticos</button>
+<button onclick="showConsequence('Foco no bem coletivo, mas posso perder apoio político.', 'group', 'fase7.html')">Escolho especialistas técnicos</button>
+<button onclick="showConsequence('Dou espaço para autonomia nas decisões, mas corro o risco de perder controle.', 'freedom', 'fase7.html')">Escolho ministros independentes</button>
+<button onclick="showConsequence('Nomeio para agradar todos, mas sem uma estratégia concreta.', 'indifference', 'fase7.html')">Escolho ministros sem critérios claros</button>
+
+    </div>
+
+    <div class="popup-overlay"></div>
+    <div id="popup" class="popup">
+        <p id="consequence-text"></p>
+        <button id="advance-button" onclick="fadeToNext()">Avançar</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

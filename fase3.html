@@ -3,26 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juventude - Desafios do Mundo</title>
+    <title>Juventude - Primeiros Passos na Política</title>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-
+    <link rel="apple-touch-icon" sizes="180x180" href="img//apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img//favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body class="fade">
     <!-- Indicador de Progresso -->
-    <div id="progress">Fase 3 de 5</div>
+    <div id="progress">Fase 3 de 11</div>
 
     <div id="game">
-        <h2>Juventude - Desafios do Mundo</h2>
-        <p id="story-text">um amigo de infância lhe pede ajuda para vender produtos ilegais fora da comunidade...</p>
-        <button onclick="showConsequence('Ao aceitar a proposta, você e seu amigo conseguem algum lucro, mas isso atrai a atenção de pessoas suspeitas...', 'group', 'fase4.html')">Aceitar a proposta e ajudá-lo</button>
-        <button onclick="showConsequence('Ao negar a proposta e relatar as intenções do amigo, você se vê sozinho, mas moralmente livre de culpa...', 'freedom', 'fase4.html')">Negar e denunciar o amigo</button>
-        <button onclick="showConsequence('Você tenta convencer seu amigo a fazer algo honesto, mas ele rejeita a sugestão...', 'power', 'fase4.html')">Desafiar o amigo, buscando uma forma legal de ajudar</button>
-        <button onclick="showConsequence('Você escolhe se distanciar da situação, não oferecendo ajuda nem se opondo ao amigo...', 'indifference', 'fase4.html')">Fingir que desconhece a proposta do amigo</button>
+        <h2>Juventude - Primeiros Passos na Política</h2>
+        <p id="story-text">
+            após participar de movimentos locais, você recebeu um convite para concorrer ao cargo de vereador(a). 
+            Essa é sua chance de entrar para a política e definir como será visto(a) pelos eleitores.
+        </p>
+        <ul>
+            <li><strong>Campanha centrada em você:</strong> Promessas grandiosas atraem atenção, mas criam expectativas difíceis de cumprir.</li>
+            <li><strong>Campanha colaborativa:</strong> Envolver a comunidade fortalece laços, mas exige mais tempo para gerar resultados.</li>
+            <li><strong>Campanha por direitos individuais:</strong> Focar na liberdade pessoal pode agradar independentes, mas alienar quem busca mudanças coletivas.</li>
+            <li><strong>Campanha superficial:</strong> Participar sem propostas claras pode garantir visibilidade, mas não gera apoio sólido.</li>
+        </ul>
+        <p>Como você quer ser lembrado(a)?</p>
+        <button onclick="showConsequence('Prometo conquistas grandiosas, mesmo que sejam difíceis de cumprir.', 'power', 'fase4.html')">Campanha centrada em mim mesmo(a)</button>
+        <button onclick="showConsequence('Convido a comunidade a participar, mesmo que isso demore mais para gerar resultados.', 'group', 'fase4.html')">Campanha colaborativa</button>
+        <button onclick="showConsequence('Defendo a liberdade pessoal e resisto a controles excessivos.', 'freedom', 'fase4.html')">Campanha por direitos individuais</button>
+        <button onclick="showConsequence('Participo apenas para ter visibilidade, sem propostas concretas.', 'indifference', 'fase4.html')">Campanha superficial</button>
+        
+        
     </div>
 
     <div class="popup-overlay"></div>

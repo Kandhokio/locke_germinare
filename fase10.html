@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presidência - Guerra e Paz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img//apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img//favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="fade">
+    <!-- Indicador de Progresso -->
+    <div id="progress">Fase 10 de 11</div>
+
+    <div id="game">
+        <h2>Presidência - Guerra e Paz</h2>
+        <p id="story-text">
+            o mundo está à beira de um conflito devastador. Após meses de tensões crescentes, uma coalizão liderada pelos Estados Unidos e pela OTAN iniciou operações militares contra a Rússia, 
+            acusada de invasão territorial em países do Leste Europeu e de violações massivas de direitos humanos. O conflito ameaça a estabilidade global, com sanções econômicas e interrupções em rotas comerciais estratégicas.
+            Sua nação, sendo um parceiro estratégico, está sob forte pressão internacional para decidir seu papel nesse cenário tenso.
+        </p>
+        <ul>
+            <li><strong>Enviar tropas:</strong> Apoiar os EUA e seus aliados fortalece relações diplomáticas e abre portas para benefícios econômicos no futuro, mas pode trazer custos humanitários e intensificar a oposição interna.</li>
+            <li><strong>Rejeitar participação:</strong> Manter o país fora do conflito garante paz interna e protege recursos, mas enfraquece sua posição junto aos aliados ocidentais.</li>
+            <li><strong>Negociar uma solução pacífica:</strong> Buscar uma mediação entre os EUA e a Rússia pode ajudar a evitar o agravamento da guerra, mas corre o risco de ser ignorado ou parecer uma postura fraca.</li>
+            <li><strong>Permanecer neutro:</strong> Não se envolver diretamente evita riscos imediatos, mas sua nação será criticada por falta de compromisso em um momento crítico para a democracia global.</li>
+        </ul>
+        <p>Qual será sua decisão neste momento histórico?</p>
+        <button onclick="showConsequence('Fortaleço alianças estratégicas, mesmo com os custos humanitários.', 'power', 'fase11.html')">Envio tropas para a guerra</button>
+        <button onclick="showConsequence('Defendo a paz interna, mesmo que isso prejudique alianças.', 'group', 'fase11.html')">Rejeito a participação</button>
+        <button onclick="showConsequence('Tento negociar, buscando uma solução diplomática.', 'freedom', 'fase11.html')">Proponho mediação internacional</button>
+        <button onclick="showConsequence('Mantenho o país neutro, evitando envolvimento direto.', 'indifference', 'fase11.html')">Permaneço neutro(a)</button>
+        
+    </div>
+
+    <div class="popup-overlay"></div>
+    <div id="popup" class="popup">
+        <p id="consequence-text"></p>
+        <button id="advance-button" onclick="fadeToNext()">Avançar</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

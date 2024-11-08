@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presidência - Reforma Econômica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img//apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img//favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="fade">
+    <!-- Indicador de Progresso -->
+    <div id="progress">Fase 8 de 11</div>
+
+    <div id="game">
+        <h2>Presidência - Reforma Econômica</h2>
+<p id="story-text">
+    o país está mergulhado em uma crise econômica que ameaça tanto a estabilidade financeira quanto a qualidade de vida da população. 
+    Sua equipe apresentou uma reforma trabalhista que promete gerar empregos e atrair investimentos, mas reduzirá direitos trabalhistas conquistados ao longo de décadas. 
+    A sociedade está dividida, e sua decisão moldará o futuro do mercado de trabalho e a relação entre empregadores e empregados.
+</p>
+<ul>
+    <li><strong>Apoiar a reforma integralmente:</strong> Gerar empregos e fomentar o crescimento econômico a curto prazo pode revitalizar a economia, mas será duramente criticado por sacrificar direitos trabalhistas.</li>
+    <li><strong>Rejeitar a reforma:</strong> Defender os direitos dos trabalhadores mantém o legado de proteção social, mas pode retardar a recuperação econômica e gerar críticas do setor empresarial.</li>
+    <li><strong>Propor ajustes:</strong> Tentar encontrar um meio-termo pode satisfazer parcialmente ambos os lados, mas exige negociações longas e arriscadas.</li>
+    <li><strong>Deixar a decisão para o Congresso:</strong> Evitar se envolver diretamente protege sua imagem política, mas será visto como falta de liderança em um momento crítico.</li>
+</ul>
+<p>Qual será sua decisão para enfrentar este dilema econômico e político?</p>
+<button onclick="showConsequence('Aceito o sacrifício dos direitos para gerar crescimento.', 'power', 'fase9.html')">Apoio a reforma integralmente</button>
+<button onclick="showConsequence('Luto pelos direitos trabalhistas, mesmo com impactos na economia.', 'group', 'fase9.html')">Rejeito a reforma</button>
+<button onclick="showConsequence('Tento encontrar um meio-termo que satisfaça todos.', 'freedom', 'fase9.html')">Proponho ajustes na reforma</button>
+<button onclick="showConsequence('Evito me envolver diretamente.', 'indifference', 'fase9.html')">Deixo a decisão para o Congresso</button>
+
+    </div>
+
+    <div class="popup-overlay"></div>
+    <div id="popup" class="popup">
+        <p id="consequence-text"></p>
+        <button id="advance-button" onclick="fadeToNext()">Avançar</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

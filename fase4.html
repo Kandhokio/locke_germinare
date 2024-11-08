@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adulto - Compromissos e Sacrifícios</title>
+    <title>Vida Adulta - Decisões Políticas</title>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-
+    <link rel="apple-touch-icon" sizes="180x180" href="img//apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img//favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body class="fade">
     <!-- Indicador de Progresso -->
-    <div id="progress">Fase 4 de 5</div>
+    <div id="progress">Fase 4 de 11</div>
 
     <div id="game">
-        <h2>Adulto - Compromissos e Sacrifícios</h2>
-        <p id="story-text">um colega de trabalho o convida a participar de um esquema financeiro ilícito...</p>
-        <button onclick="showConsequence('Ao recusar o esquema, você mantém sua integridade e a estabilidade familiar...', 'freedom', 'fase5.html')">Recusar a proposta e se afastar do colega</button>
-        <button onclick="showConsequence('Participar do esquema traz um aumento rápido de renda para você...', 'power', 'fase5.html')">Aceitar e participar do esquema</button>
-        <button onclick="showConsequence('Você decide avisar a empresa sobre o esquema, gerando uma investigação...', 'group', 'fase5.html')">Alertar a empresa sobre o esquema</button>
-        <button onclick="showConsequence('Você opta por não se envolver, mantendo-se neutro...', 'indifference', 'fase5.html')">Ignorar a proposta sem interferir</button>
+        <h2>Vida Adulta - Decisões Políticas</h2>
+<p id="story-text">
+    agora você é vereador(a) e precisa tomar decisões importantes sobre três projetos polêmicos em votação na câmara. 
+    Cada projeto terá impacto direto na comunidade que você representa, mas também enfrenta críticas e desafios éticos:
+</p>
+<ul>
+    <li><strong>Projeto do condomínio:</strong> Propõe desapropriar famílias de uma área periférica para a construção de um condomínio de luxo, prometendo desenvolvimento econômico e geração de empregos na região.</li>
+    <li><strong>Aumento de impostos:</strong> Visa aumentar a arrecadação municipal para investir na melhoria da educação pública, mas enfrentará resistência por elevar a carga tributária dos cidadãos.</li>
+    <li><strong>Privatização da saúde:</strong> Busca transferir parte da gestão do sistema de saúde para empresas privadas, prometendo maior eficiência, mas correndo o risco de reduzir o acesso das populações mais vulneráveis.</li>
+</ul>
+<p>Como você votará?</p>
+<button onclick="showConsequence('O desenvolvimento é necessário, mesmo que algumas famílias percam suas casas.', 'power', 'fase5.html')">Apoio o projeto do condomínio</button>
+<button onclick="showConsequence('Melhorar a educação vale o sacrifício.', 'group', 'fase5.html')">Apoio o aumento de impostos</button>
+<button onclick="showConsequence('A eficiência privada pode ser benéfica.', 'freedom', 'fase5.html')">Apoio a privatização da saúde</button>
+<button onclick="showConsequence('Evito conflitos, mas deixo que outros decidam.', 'indifference', 'fase5.html')">Abstenho-me</button>
+
     </div>
 
     <div class="popup-overlay"></div>

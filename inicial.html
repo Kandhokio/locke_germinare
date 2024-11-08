@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
     <div id="game">
@@ -19,17 +18,20 @@
         <input type="text" id="player-name" placeholder="Seu nome">
         <button onclick="startGame()">Iniciar Jornada</button>
         
+        <!-- Botão de Tutorial -->
+        <button onclick="window.location.href='tutorial.html'" class="tutorial-button">Tutorial</button>
+
         <!-- Botão para controle da música -->
         <button onclick="toggleMusic()" id="music-button" class="playing">Pausar Música</button>
     </div>
 
     <!-- Elemento de áudio oculto para tocar a música -->
-    <audio id="background-music" src="musica.mp3" loop></audio>
+    <audio id="background-music" src="img/musica.mp3" loop></audio>
 
     <!-- Pop-up de introdução -->
     <div id="intro-overlay" class="intro-overlay" style="display: none;">
         <div class="intro-popup">
-            <h2>Bem-vindo(a) à Jornada</h2>
+            <h2>Bem-vindo(a), jogador(a)!</h2>
             <p id="intro-text"></p>
             <button onclick="proceedToGame()">Continuar</button>
         </div>
@@ -55,7 +57,7 @@
 
             const introOverlay = document.getElementById('intro-overlay');
             const introText = document.getElementById('intro-text');
-            introText.textContent = `${playerName}, você assume a vida de um personagem fictício que nasce em uma comunidade periférica, enfrentando dilemas éticos complexos desde a infância até a velhice. Cada escolha reflete em valores inspirados nas ideias de John Locke e a teoria da “tábula rasa”, moldando quem você se tornará.`;
+            introText.textContent = `${playerName}, você é uma tábula rasa, como diria John Locke. Cada escolha que você fizer aqui moldará não apenas a sua vida, mas também o impacto que terá no mundo. Prepare-se para enfrentar dilemas que testarão seus valores, sua ética e sua visão de governança. Lembre-se: suas ações, ou a falta delas, sempre terão consequências.`;
             introOverlay.style.display = "flex";
         }
 
