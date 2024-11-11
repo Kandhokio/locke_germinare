@@ -17,20 +17,22 @@
 
     <div id="game">
         <h2>Meia-Idade - Governança e Crises</h2>
-<p id="story-text">
-    você foi eleito(a) prefeito(a), um dos cargos mais desafiadores da sua carreira. Contudo, seu mandato começa com uma série de crises que demandam atenção imediata. 
-    Cada grupo tem suas prioridades, e suas decisões moldarão não apenas sua popularidade, mas também o futuro da cidade:
-</p>
-<ul>
-    <li><strong>Pressão dos empresários:</strong> Eles pedem redução de impostos para fortalecer o comércio local e atrair investimentos externos, mas isso pode comprometer o orçamento da cidade para projetos sociais.</li>
-    <li><strong>Crise ambiental:</strong> Um desastre ambiental está devastando parte da comunidade. Você precisará priorizar ações rápidas para reduzir os impactos e proteger as famílias afetadas.</li>
-    <li><strong>Greve dos professores:</strong> Eles exigem melhores salários e condições de trabalho, mas atender às demandas pode gerar cortes em outras áreas importantes.</li>
-</ul>
-<p>Como líder, você precisa decidir onde concentrar seus esforços:</p>
-<button onclick="showConsequence('A economia precisa ser fortalecida.', 'power', 'popup-transicao.html')">Atendo os empresários</button>
-<button onclick="showConsequence('A natureza e a comunidade vêm primeiro.', 'group', 'popup-transicao.html')">Lidero ações ambientais</button>
-<button onclick="showConsequence('Tento equilibrar todas as demandas sem perder minha base de apoio.', 'freedom', 'popup-transicao.html')">Mediação entre as partes</button>
-<button onclick="showConsequence('Prefiro não me envolver diretamente.', 'indifference', 'popup-transicao.html')">Deixo que minha equipe resolva.</button>
+        <p id="story-text">
+            como prefeito(a), você enfrenta crises que dividem a cidade: empresários exigem incentivos fiscais, professores pedem melhores condições, e um desastre ambiental ameaça comunidades vulneráveis.  
+            Sua decisão definirá as prioridades econômicas, sociais e ambientais da sua gestão.
+        </p>
+        <ul>
+            <li><strong>Evitar um posicionamento claro:</strong> Permitir que cada setor administre seus próprios recursos reduz pressão, mas gera desorganização.</li>
+            <li><strong>Atender às demandas dos professores:</strong> Melhorar salários valoriza a educação, mas exige cortes em outros setores críticos.</li>
+            <li><strong>Priorizar a resposta ambiental:</strong> Proteger comunidades afetadas salva vidas, mas compromete o orçamento para outras áreas.</li>
+            <li><strong>Conceder incentivos aos empresários:</strong> Reduzir impostos fortalece a economia, mas enfraquece políticas sociais e ambientais.</li>
+        </ul>
+        <p>Qual será sua prioridade?</p>
+        <button onclick="showConsequence('Evito intervenções diretas, mesmo que isso agrave a desorganização.', 'indifference', 'popup-transicao.html')">Evitar um posicionamento claro</button>
+        <button onclick="showConsequence('Invisto na educação, mesmo com cortes em outros projetos.', 'freedom', 'popup-transicao.html')">Atender às demandas dos professores</button>
+        <button onclick="showConsequence('Protejo as comunidades, mesmo sacrificando outras áreas do orçamento.', 'group', 'popup-transicao.html')">Priorizar a resposta ambiental</button>
+        <button onclick="showConsequence('Fortaleço a economia, mesmo que isso prejudique outros setores.', 'power', 'popup-transicao.html')">Conceder incentivos aos empresários</button>
+        
 
     </div>
 
